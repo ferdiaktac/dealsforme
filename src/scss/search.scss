@@ -1,0 +1,37 @@
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: $spacingLg 0;
+
+  @include for-phone-only {
+    margin-bottom: 250px;
+  }
+
+  .icon {
+    img {
+      width: 213.155px;
+      height: 180px;
+    }
+  }
+
+  .title {
+    color: $contentPrimary;
+    font-family: "Satoshi-Bold";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: $spacing-8;
+  }
+
+  .sub-title {
+    color: $contentSecondary;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+  }
+}

@@ -1,0 +1,125 @@
+@import "mixins";
+
+.auth-box-container {
+  background-color: $surfacePrimary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  width: 100%;
+  min-height: 886px;
+
+  @include for-phone-only {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .form-container, .slider {
+    padding: $spacingMd;
+    width: 50%;
+    height: 100vh;
+
+    @include for-phone-only {
+      width: 100%;
+    }
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    @include for-phone-only {
+      width: 100%;
+    }
+
+    .inner-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 455px;
+      height: 100%;
+
+      @include for-phone-only {
+        max-width: 100%;
+      }
+
+      .logo {
+
+      }
+
+      .form-center {
+        width: 100%;
+
+        .hero-text {
+          .login-text {
+            color: $contentPrimary;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: $spacing2x;
+          }
+
+          .login-sub-text {
+            color: $contentSecondary;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 142.857% */
+            margin-bottom: $spacingS;
+          }
+        }
+
+        .login-form {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+          width: 100%;
+
+          .create-account-link {
+            margin-top: $spacingS;
+          }
+        }
+      }
+    }
+  }
+
+  .slider {
+    @include for-phone-only {
+      display: none;
+    }
+
+    .splide{
+      padding: 0;
+    }
+    .splide__slide img {
+      border-radius: 32px;
+    }
+
+    .splide__pagination {
+      bottom: 3em;
+    }
+
+    .splide__pagination__page {
+      width: 16px;
+      height: 6px;
+      margin: 0 16px 0 0;
+      background: $surfacePrimary;
+    }
+
+    .splide__pagination__page.is-active {
+      background: $contentBrand;
+      transform: none;
+    }
+  }
+}

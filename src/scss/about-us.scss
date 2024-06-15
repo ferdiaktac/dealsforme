@@ -1,0 +1,111 @@
+.about-us-content {
+  .about-us-top-content {
+    border-radius: var(--Radius-radius-lg, 24px);
+    border: var(--Quantity, 1px) solid var(--border-border-disabled, rgba(0, 0, 0, 0.05));
+    padding: $spacingS;
+    margin-bottom: $spacingMd;
+
+    @include for-phone-only{
+      border:none;
+      padding: 0;
+      margin:0;
+    }
+
+    .about-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0px 39px 0px 40px;
+      border-radius: var(--Radius-radius-md, 16px);
+      min-height: 360px;
+      border: var(--Quantity, 1px) solid var(--border-border-disabled, rgba(0, 0, 0, 0.05));
+
+      &.brand-logo {
+        background: #F0003A0D;
+      }
+
+      .icon {
+        padding: 16px;
+        border-radius: 200px;
+        border: var(--Quantity, 1px) solid var(--border-border-disabled, rgba(0, 0, 0, 0.05));
+        background: var(--surface-surface-primary, #FFF);
+        margin-bottom: 10px;
+
+        i {
+          font-size: 32px;
+          color: $contentBrand;
+        }
+      }
+
+      .title {
+        color: $contentPrimary;
+        text-align: center;
+        font-family: "Satoshi-Bold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        margin-bottom: $spacingXs;
+      }
+
+      .description {
+        color: $contentPrimary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+      }
+    }
+  }
+
+  .about-us-rest-content {
+    .about-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0px 39px 0px 40px;
+      border-radius: var(--Radius-radius-md, 16px);
+      min-height: 360px;
+      border: var(--Quantity, 1px) solid var(--border-border-disabled, rgba(0, 0, 0, 0.05));
+      margin-bottom: $spacingMd;
+
+      &.brand-logo {
+        background: #F0003A0D;
+      }
+
+      .icon {
+        padding: 16px;
+        border-radius: 200px;
+        border: var(--Quantity, 1px) solid var(--border-border-disabled, rgba(0, 0, 0, 0.05));
+        background: var(--surface-surface-primary, #FFF);
+        margin-bottom: 10px;
+
+        i {
+          font-size: 32px;
+          color: $contentBrand;
+        }
+      }
+
+      .title {
+        color: $contentPrimary;
+        text-align: center;
+        font-family: "Satoshi-Bold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        margin-bottom: $spacingXs;
+      }
+
+      .description {
+        color: $contentPrimary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+      }
+    }
+  }
+}

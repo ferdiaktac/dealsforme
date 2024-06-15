@@ -1,0 +1,120 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--Radius-radius-sm, 12px);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  width: 100%;
+  min-height: 48px;
+  border: solid 1px transparent;
+  padding: 0 $spacingXs;
+
+  &.primary {
+    background: $contentBrand;
+    color: $contentOnBrand;
+
+    &:hover {
+      background: $contentOnBrand;
+      color: $contentBrand;
+      border-color: $contentBrand;
+    }
+
+    &:active, &:focus {
+      background: $surfaceBrand;
+      color: $contentOnBrand;
+    }
+
+    &.disabled, &:disabled {
+      color: var(--content-content-disabled, rgba(0, 0, 0, 0.30));
+      font-family: "Satoshi-Medium";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      background: var(--surface-surface-disabled, #F1F5F9);
+      pointer-events: none;
+      cursor: not-allowed;
+
+      &:hover {
+
+      }
+    }
+  }
+
+  &.dark {
+    background: $contentOnBrand;
+    color: $contentPrimary;
+    border-color: $borderGray;
+
+    &:hover {
+      background: $contentOnBrand;
+      color: $contentBrand;
+      border-color: $contentBrand;
+    }
+
+    &:active, &:focus {
+      background: $surfaceBrand;
+    }
+  }
+
+  &.solid {
+    background: $contentOnBrand;
+    color: $contentPrimary;
+
+    i {
+      color: $contentPrimary;
+    }
+  }
+
+  &.outline {
+    background: transparent;
+    border-color: $surfaceBrand;
+    color: $contentBrand;
+
+    i {
+      color: $contentBrand;
+    }
+
+    &:hover {
+      background: $surfaceBrand;
+      color: $contentOnBrand;
+
+      i {
+        color: $contentBrand;
+      }
+    }
+
+    &:active, &:focus {
+      background: $surfaceBrand;
+      color: $contentOnBrand;
+
+      i {
+        color: $contentOnBrand;
+      }
+    }
+  }
+
+  &.icon-left {
+    i {
+      margin-right: $spacing-8;
+    }
+  }
+
+  &.icon-right {
+    i {
+      margin-left: $spacing-8;
+    }
+  }
+
+  &.btn-query-submit {
+    width: 250px;
+
+    @include for-phone-only {
+      width: 100%;
+    }
+  }
+}
